@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+html {
+    line-height: 1.15;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family:"Ubuntu", sans-serif;
+}
+
+body {
+    background: linear-gradient(190deg, #ffe4e1 0%, #ffc0cb 50%, #ffb6c1 100%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    color: #222;
+    overflow: hidden; 
+}
+
+.App {
+    margin-top: 48px;
+    display: flex;
+    flex-direction: column;
+}
+
+.App h1 {
+    display: inline;
+    text-align: center;
+    margin-bottom: 32px;
+    color: #222;
+    font-size: 50px;
+}
+
+.addTodos {
+    display: flex;
+    justify-content: center;
+}
+
+.todo-input {
+    min-width: 192px;
+    width: 40vw;
+    max-height: 40px;
+    background-color: #e1ebfd;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 16px;
+    align-self: center;
+}
+
+.add-btn {
+    margin-left: 16px;
+    background-color: #271c6c;
+    color: #e1ebfd;
+    border-radius: 50%;
+    border: 2px solid #e1ebfd;
+    font-size: 24px;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    box-shadow: 2px 4px 10px #271c6c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.add-btn:focus {
+    outline: none;
+}
+
+.displaytodos {
+    margin-top: 48px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.displaytodos .button {
+    margin-bottom: 32px;
+}
+
+.displaytodos .button button {
+    padding: 8px 18px;
+    border-radius: 20px;
+    cursor: pointer;
+    border: none;
+}
+
+.displaytodos .button button:not(:last-child) {
+    margin-right: 16px;
+}
+
+.displaytodos ul {
+    list-style: none;
+    display: flex;
+    align-self: flex-start;
+    flex-wrap: wrap;
+    margin-left: 5%;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    background: #b4b6da;
+    background: radial-gradient(circle, #989bd2e6 0%, #def0fce6 100%);
+    margin: 0 16px 16px 0;
+    height: 128px;
+    width: 260px;
+    border-radius: 8px;
+    padding: 16px;
+    position: relative;
+}
+
+.card textarea {
+    padding: 8px;
+    border-radius: 8px;
+    border: none;
+    background-color: #e1ebfd;
+    color: #271c6c;
+    height: 70%;
+}
+
+.card textarea:disabled {
+    background-color: transparent;
+}
+
+.card .btns {
+    position: absolute;
+    bottom: 16px;
+    right: 16px;
+}
+
+.card .btns button {
+    border-radius: 20%;
+    border: none;
+    margin: 0 8px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #271c6c;
+    background-color: transparent;
+}
+
+.card .btns button:focus {
+    outline: none;
+}
+
+.completed {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    background-color: #867bcd;
+    border: 2px solid #272727;
+    color: #e1ebfd;
+    font-size: 13px;
+    padding: 5px 16px;
+    border-radius: 20px;
+}
+
+@media Screen and (max-width: 640px) {
+    .displaytodos {
+        overflow: hidden;
+        margin-top: 32px;
+    }
+
+    .displaytodos ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: 0;
+        align-self: center;
+    }
+
+    .card {
+        margin-right: 0;
+    }
+}
